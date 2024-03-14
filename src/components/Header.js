@@ -27,7 +27,7 @@ const Header = () => {
               </h2>
             </div>
             <div className="col-5">
-              <div class="input-group">
+              <div className="input-group">
                 <input
                   type="text"
                   className="form-control py-2"
@@ -43,7 +43,7 @@ const Header = () => {
             <div className="col-5">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div>
-                  <Link className="d-flex align-items-center gap-10 text-white">
+                  <Link to="/compare-product" className="d-flex align-items-center gap-10 text-white">
                     <img src="/images/compare.svg" alt="compare" />
                     <p className="mb-0">
                       Compare <br /> Products
@@ -51,7 +51,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link className="d-flex align-items-center gap-10 text-white">
+                  <Link to="/wishlist" className="d-flex align-items-center gap-10 text-white">
                     <img src="/images/wishlist.svg" alt="wishlist" />
                     <p className="mb-0">
                       Favorite <br /> Wishlist
@@ -59,7 +59,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link className="d-flex align-items-center gap-10 text-white">
+                  <Link to="/login" className="d-flex align-items-center gap-10 text-white">
                     <img src="/images/user.svg" alt="login" />
                     <p className="mb-0">
                       Login <br /> My Account
@@ -67,7 +67,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link className="d-flex align-items-center gap-10 text-white">
+                  <Link to="/cart" className="d-flex align-items-center gap-10 text-white">
                     <img src="/images/cart.svg" alt="cart" />
                     <div className="d-flex flex-column gap-10">
                       <span className="badge bg-white text-dark">0</span>
@@ -121,10 +121,18 @@ const Header = () => {
                 </div>
                 <div className="menu-links">
                   <div className="d-flex align-items-center gap-15">
-                    <NavLink className="text-white">Home</NavLink>
-                    <NavLink className="text-white">Our Store</NavLink>
-                    <NavLink className="text-white">Blogs</NavLink>
-                    <NavLink className="text-white">Contact</NavLink>
+                    <NavLink to="/" className="text-white">
+                      Home
+                    </NavLink>
+                    <NavLink to="/store" className="text-white">
+                      Our Store
+                    </NavLink>
+                    <NavLink to="/blog" className="text-white">
+                      Blog
+                    </NavLink>
+                    <NavLink to="/contact" className="text-white">
+                      Contact
+                    </NavLink>
                   </div>
                 </div>
               </div>
