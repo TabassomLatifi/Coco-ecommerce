@@ -7,15 +7,26 @@ const ProductCard = (props) => {
     <div
       className={location.pathname === "/store" ? `gr-${props.grid}` : "col-2"}
     >
-      <Link to="product/:id" className="product-card position-relative">
+      <Link
+        to={`${location.pathname === '/store' ? "product/:id" : location.pathname === '/' ? 'store/product/:id' : ''}`}
+        className="product-card position-relative"
+      >
         <div className="wishlist-icon position-absolute">
           <button className="border-0 bg-transparent">
             <img src="../../images/wish.svg" alt="wishlist" />
           </button>
         </div>
         <div className="product-image">
-          <img src="../../images/watch-01.png" className="img-fluid" alt="product" />
-          <img src="../../images/watch-02.png" className="img-fluid" alt="product" />
+          <img
+            src="../../images/watch-01.png"
+            className="img-fluid"
+            alt="product"
+          />
+          <img
+            src="../../images/watch-02.png"
+            className="img-fluid"
+            alt="product"
+          />
         </div>
         <div className="product-details">
           <h6 className="brand">Havels</h6>
@@ -29,7 +40,11 @@ const ProductCard = (props) => {
             edit={false}
             activeColor="#ffd700"
           />
-          <p className={`description ${props.grid === 12 ? 'd-block' : 'd-none'}`}>
+          <p
+            className={`description ${
+              props.grid === 12 ? "d-block" : "d-none"
+            }`}
+          >
             A watch is a small clock carried or worn by a person. It makes it
             easy to see the time. It is also a fashion accessory for men and
             women, and expensive watches are designed for this purpose. A watch

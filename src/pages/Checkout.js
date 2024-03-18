@@ -44,7 +44,7 @@ function Checkout() {
               >
                 <div className="w-100">
                   <select name="" id="" className="form-control form-select">
-                    <option value="" selected disabled>
+                    <option value="DEFAULT" selected disabled>
                       Select Country
                     </option>
                   </select>
@@ -86,7 +86,7 @@ function Checkout() {
                 </div>
                 <div className="flex-grow-1">
                   <select name="" id="" className="form-control form-select">
-                    <option value="" selected disabled>
+                    <option value="DEFAULT" selected disabled>
                       Select State
                     </option>
                   </select>
